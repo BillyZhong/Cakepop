@@ -18,6 +18,15 @@ def getLinks(searchString):
 	links = g.get_urls()
 	return links
 
+def findLinks():
+	searchString = makeString(sys.argv)
+	return getLinks(searchString)
 
-searchString = makeString(sys.argv)
-getLinks(searchString)
+def printLinks(links):
+	for link in links:
+		print link
+
+inputString = makeString(sys.argv)
+links = getLinks(inputString)
+printLinks(links)
+
