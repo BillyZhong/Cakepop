@@ -4,12 +4,17 @@
   "name": "CakePop",
   "description": "This extension will analyze a page and pull up various related links",
   "version": "1.0",
- 
+  
   "browser_action": {
    "default_icon": "icon.png",
    "default_popup": "popup.html",
    "default_title": "Click Here"
   },
+
+  "background": {
+      "scripts": ["background.js"]
+    },
+
   "permissions": [
    "activeTab"
    ]
