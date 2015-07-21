@@ -1,8 +1,0 @@
-{
-  "name": "CakePop",
-  "version": "0.0.1",
-  "description": "Sends the body and title of the current html page to the server for parsing",
-  "dependencies": {
-    "express": "^4.10.2"
-  }
-}
