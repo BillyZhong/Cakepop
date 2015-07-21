@@ -10,15 +10,16 @@
   <link href="/source/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+  <div class="extfooter" style="position:fixed;bottom:0px;width:100%;height:45%"></div>
+  <div class="fixed-action-btn" style="z-index:1000;bottom: 45px; right: 24px;">
           <a style="background-color:#FD9395" class="btn-floating btn-large">
             <i class="material-icons">dashboard</i>
           </a>
           <ul>
-            <li><a class="btn-floating red" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px); opacity: 0;"><i class="material-icons">language</i></a></li>
-            <li><a class="btn-floating yellow darken-1" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px); opacity: 0;"><i class="material-icons">today</i></a></li>
-            <li><a class="btn-floating green" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px); opacity: 0;"><i class="material-icons">location_on</i></a></li>
-            <li><a class="btn-floating blue" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px); opacity: 0;"><i class="material-icons">person_pin</i></a></li>
+            <li><a class="btn-floating red" style="background-color:#F44336;transform: scaleY(0.4) scaleX(0.4) translateY(40px); opacity: 0;"><i class="material-icons">language</i></a></li>
+            <li><a class="btn-floating yellow darken-1" style="background-color:#FDD835;transform: scaleY(0.4) scaleX(0.4) translateY(40px); opacity: 0;"><i class="material-icons">today</i></a></li>
+            <li><a class="btn-floating green" style="background-color:#4CAF50;transform: scaleY(0.4) scaleX(0.4) translateY(40px); opacity: 0;"><i class="material-icons">location_on</i></a></li>
+            <li><a class="btn-floating blue" style="background-color:#2196F3;transform: scaleY(0.4) scaleX(0.4) translateY(40px); opacity: 0;"><i class="material-icons">person_pin</i></a></li>
           </ul>
         </div>
   <nav class="white" role="navigation">
@@ -167,8 +168,10 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="/source/js/socket.io.min.js"></script>
   <script src="/source/js/materialize.js"></script>
   <script src="/source/js/init.js"></script>
-
+  <script src="/source/js/bubble.js"></script>
+  <script src="/source/js/socketio.js"></script>
   </body>
 </html>

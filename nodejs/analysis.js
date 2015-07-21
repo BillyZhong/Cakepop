@@ -1,11 +1,12 @@
+var socket = require('socket.io');
 var express = require('express');
 var app = express();
 
-app.get('/', function(req, res){
-	res.sendFile('/home/cakepop/Cakepop/nodejs/test.html');
-});
-app.get('/source/*', function(req, res){
-	res.sendFile('/home/cakepop/Cakepop' + req.path);
-});
+var server = app.listen(8080);
+var io = socket.listen(server);
 
-app.listen(8080);
+io.sockets.on('connection', function(c){
+	c.on('Gimmedata', function(){
+		c.emit('Yaboi', {'kushal': 'Testing Shit'});
+	});
+});
