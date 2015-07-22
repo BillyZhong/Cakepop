@@ -25,13 +25,13 @@ btn.click(function(e) {
   var circle = $("<div unselectable='on' id='circle'></div>");
   background.append(circle);
   circle.css({
-    position: 'fixed',
+    position: 'absolute',
     'background-color': color,
     width: 0,
     height: 0,
     "border-radius": "50%",
     left: e.pageX,
-    top: e.pageY - $(window).scrollTop(),
+    top: e.pageY - circle.parent().offset().top,//window.screen.height - e.pageY + $(window).scrollTop(),
     'margin-left': 0,
     'margin-top': 0,
     'webkit-user-select': 'none',
@@ -44,13 +44,12 @@ btn.click(function(e) {
    	'margin-left': -r,
     'margin-top': -r
   }, {
-    duration: 600,
+    duration: 700,
     easing: "easeInOutCubic",
     queue: false,
     complete: function() {
      circle.parent().css({
         'background-color': color,
-        'z-index': 999
       });
      circle.detach();
     }
